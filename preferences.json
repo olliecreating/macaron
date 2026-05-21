@@ -41,13 +41,6 @@
       { "value": 3, "label": "Chunky" }
     ]
   },
-
-  {
-    "type": "checkbox",
-    "property": "mac.urlbar-popup",
-    "label": "Enable Macaron URL bar popup",
-    "defaultValue": true
-  },
   
   {
     "type": "separator",

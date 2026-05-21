@@ -169,42 +169,6 @@ tab:not([pinned="true"]):not([zen-essential="true"]) .tab-background,
   }
 }
 
-/* Macaron URL bar popup */
-@media (-moz-pref("mac.urlbar-popup")) {
-  #urlbar[breakout][breakout-extend="true"] {
-    border: 3px solid currentColor !important;
-    border-radius: 14px !important;
-    box-shadow: var(--mac-shadow-strong) var(--mac-shadow-strong) 0 currentColor !important;
-    overflow: hidden !important;
-  }
-
-  #urlbar[breakout][breakout-extend="true"] .urlbar-background {
-    background: transparent !important;
-    border-radius: inherit !important;
-  }
-
-  #urlbar[open] > .urlbarView > .urlbarView-body-outer {
-    border-top: 2px solid currentColor !important;
-  }
-
-  .urlbarView-row {
-    border: 2px solid transparent !important;
-    border-radius: 10px !important;
-    margin-block: 3px !important;
-  }
-
-  .urlbarView-row:hover,
-  .urlbarView-row[selected] {
-    border-color: currentColor !important;
-    background: color-mix(in srgb, var(--mac-accent) 28%, transparent) !important;
-    box-shadow: var(--mac-shadow-soft) var(--mac-shadow-soft) 0 currentColor !important;
-  }
-
-  .urlbarView-row[selected] .urlbarView-row-inner {
-    transform: translate(1px, 1px) !important;
-  }
-}
-
 /* Optional doodle pack */
 @media (-moz-pref("mac.doodles")) {
   @media (-moz-pref("mac.doodle-pack", "none")) {
