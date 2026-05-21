@@ -1,4 +1,4 @@
-/*window border */
+/* window border */
 
 :root[sizemode="normal"] #zen-browser-background {
   border: 2px solid light-dark(black, white) !important;

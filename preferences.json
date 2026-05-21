@@ -19,6 +19,7 @@
     "value": "string",
     "defaultValue": "strawberry",
     "options": [
+      { "value": "original", "label": "Original" },
       { "value": "strawberry", "label": "Strawberry" },
       { "value": "pistachio", "label": "Pistachio" },
       { "value": "blueberry", "label": "Blueberry" },
@@ -99,6 +100,13 @@
     "type": "checkbox",
     "property": "mac.navbuttons.disabled",
     "label": "Disable navigation buttons",
+    "defaultValue": true
+  },
+
+  {
+    "type": "checkbox",
+    "property": "mac.toolbar-hover.enabled",
+    "label": "Enable tactile hover effects for toolbar buttons",
     "defaultValue": true
   },
 

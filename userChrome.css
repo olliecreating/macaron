@@ -9,3 +9,7 @@
 @import url("modules/webview.css");
 @import url("modules/marginless.css");
 @import url("modules/style-options.css");
+
+:root {
+  --mac-border-radius: 20px !important;
+}

@@ -55,30 +55,29 @@
 @media (-moz-pref("mac.marginless-mode", 1)) {
   :root {
     --zen-element-separation: 4px !important;
-    --zen-webview-border-radius: 6px !important;
+    --zen-webview-border-radius: var(--zen-border-radius) !important;
   }
 
   :root:not([inDOMFullscreen="true"]) #zen-browser-background {
     border-width: 1px !important;
-    border-radius: 6px !important;
+    border-radius: var(--zen-border-radius) !important;
   }
 
   #tabbrowser-tabpanels {
     margin-right: 1px !important;
     margin-bottom: 1px !important;
     border-width: 1px !important;
-    border-radius: 6px !important;
+    border-radius: var(--zen-border-radius) !important;
     box-shadow: 1px 1px 0 currentColor !important;
   }
 
   .browserSidebarContainer,
   .browserStack {
-    border-radius: 6px !important;
+    border-radius: var(--zen-border-radius) !important;
   }
 
   :root[zen-compact-mode="true"] #titlebar {
     margin: 6px !important;
-    border-radius: 6px !important;
     box-shadow: 1px 1px 0 currentColor !important;
   }
 }
