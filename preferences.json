@@ -37,8 +37,7 @@
     "options": [
       { "value": 0, "label": "None" },
       { "value": 1, "label": "Soft" },
-      { "value": 2, "label": "Classic" },
-      { "value": 3, "label": "Chunky" }
+      { "value": 2, "label": "Classic" }
     ]
   },
   
