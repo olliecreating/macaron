@@ -12,7 +12,8 @@
 }
 
 
-#urlbar:not([breakout-extend="true"]):active {
+#urlbar:not([breakout-extend="true"]):active,
+:root:not([inDOMFullscreen="true"]) #urlbar:not([breakout-extend="true"]):active {
   transform: translate(4px, 4px) !important;
   box-shadow: 0px 0px 0px currentColor !important;
 }
@@ -269,6 +270,22 @@ zen-folder:not([collapsed]) {
   transform: translate(3px, 3px) !important;
   transition: transform 0.12s ease !important;
 }
+
+/* Prevent floating breakout urlbar from being shifted by compact mode hover */
+:root[zen-compact-mode="true"]:has(#titlebar:hover) #urlbar[breakout][breakout-extend="true"] {
+  transform: none !important;
+}
+
+/* Ensure urlbars translate correctly on press in compact mode */
+:root[zen-compact-mode="true"]:has(#titlebar) #urlbar:not([breakout-extend="true"]):active {
+  transform: translate(4px, 4px) !important;
+  box-shadow: 0px 0px 0px currentColor !important;
+}
+:root[zen-compact-mode="true"]:has(#titlebar) #urlbar[breakout][breakout-extend="true"]:active {
+  transform: translate(6px, 6px) !important;
+  box-shadow: 0px 0px 0px currentColor !important;
+}
+
 
 /*to align the sidebar */
 :root[zen-compact-mode="true"] #titlebar {

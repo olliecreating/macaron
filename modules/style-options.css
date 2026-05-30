@@ -290,7 +290,9 @@ tab:not([pinned="true"]):not([zen-essential="true"]) .tab-background,
 :root:not([inDOMFullscreen="true"]) #urlbar:not([breakout-extend="true"]) {
   box-shadow: var(--mac-shadow-deep) var(--mac-shadow-deep) 0px currentColor !important;
 }
-#urlbar:not([breakout-extend="true"]):active {
+#urlbar:not([breakout-extend="true"]):active,
+:root:not([inDOMFullscreen="true"]) #urlbar:not([breakout-extend="true"]):active,
+:root[zen-compact-mode="true"]:has(#titlebar) #urlbar:not([breakout-extend="true"]):active {
   transform: translate(var(--mac-shadow-deep), var(--mac-shadow-deep)) !important;
   box-shadow: 0px 0px 0px currentColor !important;
 }
@@ -377,10 +379,14 @@ zen-folder:not([collapsed]) .tab-group-label {
 }
 
 /* Floating URL Bar breakout */
-#urlbar[breakout][breakout-extend="true"] {
+:root #urlbar[breakout][breakout-extend="true"] {
   box-shadow: var(--mac-shadow-extra-deep) var(--mac-shadow-extra-deep) 0px currentColor !important;
 }
-#urlbar[breakout][breakout-extend="true"]:active {
+:root[zen-compact-mode="true"]:has(#titlebar:hover) #urlbar[breakout][breakout-extend="true"] {
+  transform: none !important;
+}
+#urlbar[breakout][breakout-extend="true"]:active,
+:root[zen-compact-mode="true"]:has(#titlebar) #urlbar[breakout][breakout-extend="true"]:active {
   transform: translate(var(--mac-shadow-extra-deep), var(--mac-shadow-extra-deep)) !important;
   box-shadow: 0px 0px 0px currentColor !important;
 }
@@ -408,7 +414,10 @@ zen-folder:not([collapsed]) .tab-group-label {
   box-shadow: 0px 0px 0px currentColor !important;
 }
 
-/* Compact Mode Titlebar hover effects */
+/* Compact Sidebar & Hover effects */
+:root[zen-compact-mode="true"] #titlebar {
+  box-shadow: var(--mac-shadow-deep) var(--mac-shadow-deep) 0 currentColor !important;
+}
 :root[zen-compact-mode="true"] #titlebar:hover {
   box-shadow: var(--mac-shadow-selected) var(--mac-shadow-selected) 0 currentColor !important;
   transform: translate(var(--mac-shadow-medium), var(--mac-shadow-medium)) !important;
