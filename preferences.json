@@ -17,7 +17,7 @@
     "property": "mac.accent-preset",
     "label": "Accent preset",
     "value": "string",
-    "defaultValue": "strawberry",
+    "defaultValue": "original",
     "options": [
       { "value": "original", "label": "Original" },
       { "value": "strawberry", "label": "Strawberry" },
