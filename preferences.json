@@ -35,7 +35,7 @@
     "value": "number",
     "defaultValue": 2,
     "options": [
-      { "value": 0, "label": "None" },
+      { "value": 0, "label": "Flat" },
       { "value": 1, "label": "Soft" },
       { "value": 2, "label": "Classic" }
     ]
