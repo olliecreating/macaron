@@ -85,13 +85,39 @@
 tab[selected="true"] .tab-background,
 tab[pinned="true"][selected="true"] .tab-background,
 tab[zen-essential="true"][selected="true"] .tab-background,
-zen-folder:not([collapsed]) .tab-group-label-container,
 #zen-media-controls-toolbar.playing {
-  background: color-mix(in srgb, var(--mac-accent) 60%, var(--zen-primary-color) 40%) !important;
+  background: var(--mac-accent) !important;
 }
 
-zen-folder[collapsed] .tab-group-label-container {
-  background: color-mix(in srgb, var(--mac-accent-2) 55%, var(--zen-primary-color) 45%) !important;
+zen-folder[collapsed] .tab-group-label-container{
+    background: color-mix(
+    in srgb,
+    var(--mac-accent) 80%,
+    #fff1d6 20%
+  ) !important;
+}
+
+@media (-moz-pref("mac.accent-preset", "original")) {
+  :root {
+    --mac-accent: var(--zen-primary-color);
+    --mac-accent-2: var(--zen-primary-color); /* Keep original vanilla folder tint */
+    --mac-accent-3: var(--zen-primary-color);
+  }
+
+  /* Restore default backgrounds for original preset */
+  tab[selected="true"] .tab-background,
+  tab[pinned="true"][selected="true"] .tab-background,
+  tab[zen-essential="true"][selected="true"] .tab-background {
+    background: var(--tab-selected-bgcolor) !important;
+  }
+  
+  zen-folder[collapsed] .tab-group-label-container {
+    background: color-mix(
+      in srgb,
+      var(--zen-primary-color) 60%,
+      #fff1d6 40%
+    ) !important;
+  }
 }
 
 
@@ -121,7 +147,7 @@ tab:not([pinned="true"]):not([zen-essential="true"]) .tab-background,
 
 /* Consistent pressed surfaces */
 @media (-moz-pref("mac.toolbar-hover.enabled")) {
-  #zen-sidebar-top-buttons toolbarbutton,
+  #zen-sidebar-top-buttons toolbarbutton:not(.titlebar-button),
   #zen-workspaces-button toolbarbutton,
   #zen-workspaces-button .subviewbutton,
   #unified-extensions-button,
@@ -139,7 +165,7 @@ tab:not([pinned="true"]):not([zen-essential="true"]) .tab-background,
       background-color 0.1s ease !important;
   }
 
-  #zen-sidebar-top-buttons toolbarbutton:hover,
+  #zen-sidebar-top-buttons toolbarbutton:not(.titlebar-button):hover,
   #zen-workspaces-button toolbarbutton:hover,
   #zen-workspaces-button .subviewbutton:hover,
   #unified-extensions-button:hover,
@@ -154,7 +180,7 @@ tab:not([pinned="true"]):not([zen-essential="true"]) .tab-background,
     background: color-mix(in srgb, var(--mac-accent) 25%, transparent) !important;
   }
 
-  #zen-sidebar-top-buttons toolbarbutton:active,
+  #zen-sidebar-top-buttons toolbarbutton:not(.titlebar-button):active,
   #zen-workspaces-button toolbarbutton:active,
   #zen-workspaces-button .subviewbutton:active,
   #unified-extensions-button:active,
