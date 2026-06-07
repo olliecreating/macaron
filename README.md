@@ -1,4 +1,4 @@
-## This is a personal fork of Macaron with custom modifications for my own use. It is not the official repository
+This is a personal fork of Macaron with custom modifications for my own use. It is not the official repository
 
 # Macaron
 
